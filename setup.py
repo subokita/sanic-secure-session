@@ -40,12 +40,12 @@ setup(
     author       = 'Saburo Okita, Sergei Beilin',
     author_email = 'saburo.okita@gmail.com',
     url          = 'https://github.com/subokita/sanic-secure-session',
-    packages=find_packages('src'),
-    # py_modules = ['src'],
+    # packages=find_packages('src'),
+    py_modules = ['sanic_secure_session'],
     # packages             = ['sanic_secure_session'],
     # package_dir          = {'': 'src'},
     # py_modules           = [splitext(basename(path))[0] for path in glob('src/*.py')],
-    include_package_data = False,
+    include_package_data = True,
     zip_safe             = False,
     classifiers          = [
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
