@@ -42,7 +42,7 @@ setup(
     url          = 'https://github.com/subokita/sanic-secure-session',
 
     packages    = ['src',],
-    # package_dir = {'': 'src'},
+    package_dir = {'': 'src'},
     # py_modules  = [splitext(basename(path))[0] for path in glob('src/*.py')],
     # packages     = find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # py_modules   = [splitext(basename(path))[0] for path in glob('src/*.py')],
