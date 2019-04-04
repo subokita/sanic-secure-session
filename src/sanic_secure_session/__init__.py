@@ -68,7 +68,7 @@ class SanicSession:
         session_cookie = Signer(self.secret_key).sign(request['session'].sid.encode('ascii')).decode('ascii')
         response.cookies[self.cookie_name] = session_cookie
         if self.ttl:
-            response.cookies[self.cookie_name]['max-age'] = self.ttl.total_seconds()
+            response.cookies[self.cookie_name]['max-age'] = int(self.ttl.total_seconds())
             response.cookies[self.cookie_name]['expires'] = datetime.utcnow() + self.ttl
         if self.domain:
             response.cookies[self.cookie_name]['domain'] = self.domain

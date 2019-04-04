@@ -23,7 +23,7 @@ class RedisStorageBackend(StorageBackend):
 
     async def save(self, sid, data, expire=None):
         raw_data = json.dumps(data)
-        await (await self.redis_connection()).set(sid, raw_data, expire)
+        await ( await self.redis_connection() ).set( sid, raw_data )
 
     async def remove(self, sid):
         await (await self.redis_connection()).delete(sid)
