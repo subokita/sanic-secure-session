@@ -29,24 +29,25 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='sanic-secure-session',
-    version='0.1.0',
-    license='MIT license',
-    description='A fork from sanic-secure-session',
-    long_description='%s\n%s' % (
+    name             = 'sanic-secure-session',
+    version          = '0.1.0',
+    license          = 'MIT license',
+    description      = 'A fork from sanic-secure-session',
+    long_description = '%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.md')),
         re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
     ),
-    author='Saburo Okita, Sergei Beilin',
-    author_email='saburo.okita@gmail.com',
-    url='https://github.com/subokita/sanic-secure-session',
+    author       = 'Saburo Okita, Sergei Beilin',
+    author_email = 'saburo.okita@gmail.com',
+    url          = 'https://github.com/subokita/sanic-secure-session',
     # packages=find_packages('src'),
-    packages=['sanic_secure_session'],
-    package_dir={'': 'src'},
-    py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
-    include_package_data=True,
-    zip_safe=False,
-    classifiers=[
+    py_modules = ['sanic_secure_session'],
+    # packages             = ['sanic_secure_session'],
+    # package_dir          = {'': 'src'},
+    # py_modules           = [splitext(basename(path))[0] for path in glob('src/*.py')],
+    include_package_data = True,
+    zip_safe             = False,
+    classifiers          = [
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
@@ -62,8 +63,8 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Utilities',
     ],
-    keywords=[
+    keywords = [
         'sanic', 'session'
     ],
-    install_requires=['sanic', 'itsdangerous']
+    install_requires = ['sanic', 'itsdangerous']
 )
