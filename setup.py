@@ -11,7 +11,7 @@ from os.path import dirname
 from os.path import join
 from os.path import splitext
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(*names, **kwargs):
@@ -29,24 +29,27 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='sanic-secure-session',
-    version='0.2.0',
-    license='MIT license',
-    description='A server-side secure sessions plugin for Sanic',
-    long_description='%s\n%s' % (
+    name             = 'sanic-secure-session',
+    version          = '0.2.0',
+    license          = 'MIT license',
+    description      = 'A server-side secure sessions plugin for Sanic',
+    long_description = '%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.md')),
         re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
     ),
-    author='Sergei Beilin',
-    author_email='saabeilin@gmail.com',
-    url='https://github.com/saabeilin/sanic-secure-session',
-    # packages=find_packages('src'),
-    packages=['sanic_secure_session'],
-    package_dir={'': 'src'},
-    py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
-    include_package_data=True,
-    zip_safe=False,
-    classifiers=[
+    author       = 'Sergei Beilin',
+    author_email = 'saabeilin@gmail.com',
+    url          = 'https://github.com/saabeilin/sanic-secure-session',
+    # packages     = find_packages(),
+    packages= find_packages('src'),
+    # packages= ['sanic_secure_session'],
+    package_dir  = {
+        '': 'src',
+    },
+    # py_modules= [splitext(basename(path))[0] for path in glob('src/*.py')],
+    include_package_data = True,
+    zip_safe             = False,
+    classifiers          = [
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
@@ -62,8 +65,8 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Utilities',
     ],
-    keywords=[
+    keywords = [
         'sanic', 'session'
     ],
-    install_requires=['sanic', 'itsdangerous']
+    install_requires = ['sanic', 'itsdangerous']
 )
