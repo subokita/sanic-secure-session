@@ -11,7 +11,7 @@ from os.path import dirname
 from os.path import join
 from os.path import splitext
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(*names, **kwargs):
@@ -40,8 +40,9 @@ setup(
     author       = 'Saburo Okita, Sergei Beilin',
     author_email = 'saburo.okita@gmail.com',
     url          = 'https://github.com/subokita/sanic-secure-session',
+    packages     = find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # packages=find_packages('src'),
-    py_modules = ['sanic_secure_session'],
+    # py_modules = ['sanic_secure_session'],
     # packages             = ['sanic_secure_session'],
     # package_dir          = {'': 'src'},
     # py_modules           = [splitext(basename(path))[0] for path in glob('src/*.py')],
