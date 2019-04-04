@@ -29,7 +29,7 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='sanic-secure-session-2',
+    name='sanic-secure-session',
     version='0.1.0',
     license='MIT license',
     description='A fork from sanic-secure-session',
