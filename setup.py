@@ -41,9 +41,9 @@ setup(
     author_email = 'saburo.okita@gmail.com',
     url          = 'https://github.com/subokita/sanic-secure-session',
 
-    packages    = ['sanic_secure_session'],
-    package_dir = {'': 'src'},
-    py_modules  = [splitext(basename(path))[0] for path in glob('src/*.py')],
+    packages    = ['src',],
+    # package_dir = {'': 'src'},
+    # py_modules  = [splitext(basename(path))[0] for path in glob('src/*.py')],
     # packages     = find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # py_modules   = [splitext(basename(path))[0] for path in glob('src/*.py')],
     include_package_data = True,
